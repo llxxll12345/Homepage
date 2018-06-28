@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+{% block main %}
+    <article class="post post-1">
+        <header class="entry-header">
+            <h1 class="entry-title"> {{ post.title }}</h1>
+            <div class="entry-meta">
+                <span class="post-category"><a href="{{ post.get_absolute_url }}"> {{ post.category }} </a></span>
+                <span class="post-date"><a href="#"><time class="entry-date"
+                                                          datetime="{{ post.create_time }}"> {{ post.create_time }} </time></a></span>
+                <span class="post-author"><a href="#"> {{ post.author }} </a></span>
+                <span class="comments-link"><a href="#">{{ cm_len }}</a></span>
+                <span class="views-count"><a href="#">{{ post.views }}</a></span>
+            </div>
+        </header>
+        <div class="entry-content clearfix">
+            <p> {{ post.body|safe }}</p>
+        </div>
+    </article>
+    <section class="comment-area" id="comment-area">
+        <hr>
+        <h3>发表评论</h3>
+        <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
+            {% csrf_token %}
+            <div class ="row">
+                <div class = "col-md-4">
+                    <label for="{{ form.name.id_for_label }}">Name</label>
+                    {{ form.name }}
+                    {{ form.name.errors }}
+                </div>
+                <div class = "col-md-4">
+                    <label for="{{ form.email.id_for_label }}">Email</label>
+                    {{ form.email }}
+                    {{ form.email.errors }}
+                </div>
+                <div class = "col-md-4">
+                    <label for="{{ form.url.id_for_label }}">Url</label>
+                    {{ form.url }}
+                    {{ form.url.errors }}
+                </div>
+                <div class = "col-md-12">
+                    <label for="{{ form.text.id_for_label }}">Text</label>
+                    {{ form.text }}
+                    {{ form.text.errors }}
+                    <textarea name="text" cols="20" rows="5" id="comment_text">
+
+                    </textarea>
+                    <span>
+                        <p style="color:red;">
+                            Character count:<span id = "chcount" >0</span>
+
+                            Word count:<span id = "wdcount">0</span>
+                        <ul>At most 1000 characters</ul>
+                        </p>
+
+                    </span>
+                    <button type="submit" class = "comment-btn"> Submit </button>
+                </div>
+            </div>
+        </form>
+        <ul class = "comment-list list-unstyled">
+            {% for comment in comment_list %}
+            <li class="comment-item">
+                <span class="nickname">{{ comment.name }}</span>
+                <time class="submit-date">{{ comment.create_time }}</time>
+                <div class="text">
+                    {{ comment.text }}
+                </div>
+            </li>
+            {% empty %}
+            <li>
+                <p> No comments </p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock main %}
+{% block toc %}
+
+
+<script>
+$(document).ready(function(){
+	var i = 0;
+    $("#comment_text").keyup( function() {
+        console.log("clicked");
+        $(this).css("background-color:red;");
+        $("#chcount").text($(this).val().length);
+
+        var input = $(this).val();
+        console.log(input);
+        var words = new Array();
+        var tempWord = "";
+        var wordCnt = 0;
+        for (i = 0;i < input.length; i++) {
+            if (input[i] != ' ' && input[i+1] == ' ') {
+                wordCnt++;
+            }
+        }
+        $("#wdcount").text(wordCnt);
+        console.log(wordCnt);
+
+    });
+	function resetBg(eleName) {
+		$(eleName).css("background-color","white");
+	}
+	// click event
+  	$("#test1").click(function(){
+    	$(this).hide(1000);
+  	});
+  	$("p.test").click(function() {
+  		$(this).css("color","red");
+  	});
+  	$("input").click(function() {
+  		$("p.test").toggle(200, function() {
+  			$(this).css("color","black");
+  		});
+  	});
+
+  	//double click
+  	$("p").dblclick(function() {
+  		//alert("double click.");
+  	})
+
+  	//mouseenter
+  	$("p").mouseenter(function() {
+  		$(this).css("background-color","green");
+  	})
+  	$("p").mouseleave(function() {
+  		resetBg("p");
+  	})
+
+  	$("input").keydown(function() {
+  		$(this).css("background-color","yellow");
+  	})
+  	$("input").keyup(function() {
+  		resetBg("input");
+  	})
+
+  	// submit form
+  	$("form").submit(function() {
+  		//alert("Submitted");
+  	});
+
+  	$("input").focus(function(){
+    	$("#submit").css("display","inline").fadeOut(2000);
+  	});
+  	$("input").blur(function(){
+    	$("#submit").show();
+  	});
+
+  	// fade
+  	function fadein() {
+  		$("#div1").fadeIn();
+	    $("#div2").fadeIn("slow");
+	    $("#div3").fadeIn(3000);
+  	}
+
+  	function fadeout() {
+  		$("#div1").fadeOut();
+	    $("#div2").fadeOut("slow");
+	    $("#div3").fadeOut(3000);
+  	}
+
+  	function fadeto() {
+  		$("#div1").fadeTo("slow",0.2);
+	    $("#div2").fadeTo("slow", 0.5);
+	    $("#div3").fadeTo("slow", 0.7);
+  	}
+
+  	$(".btnCg").click(function(){
+	    //if (i & 1 == 1) fadein();
+	    //else fadeout();
+	    $("#div1").fadeToggle();
+		$("#div2").fadeToggle("slow");
+		$("#div3").fadeToggle(1000);
+		fadeto();
+  	});
+});
+</script>
+Input your name: <input type="text">
+<p> Number of Characters entered:
+	<span> 0 </span>
+</p>
+<form action = "">
+First Name:
+<input type = "test" name = "First" value = "Lixing"><br>
+Last Name:
+<input type = "text" name = "Last"  value = "Liu"><br>
+<span id = "submit"> Submit here</span>
+<input type = "submit" id = "btnSub" value = "Submit">
+</form>
+<p id = "test1"> id test1</p>
+<p class = "test"> class test p </p>
+<br>
+<button class = "btnCg">change</button>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+{% endblock toc%}
+

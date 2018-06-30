@@ -5,15 +5,18 @@
         <article class="post post-1">
             <header class="entry-header">
                <h1 class="entry-title">
-                   <a href="{{ post.0.get_absolute_url }}"> {{ post.0.title }} </a>
+                   <a href="{{ post.get_absolute_url }}"> {{ post.title }} </a>
                </h1>
                 <div class="entry-meta">
-                    <span class="post-category"><a href="#"> {{ post.0.category.name }} </a></span>
+                    <span class="post-category"><a href="#"> {{ post.category.name }} </a></span>
                     <span class="post-date"><a href="#"><time class="entry-date"
-                                                              datetime="{{ post.create_time }}"> {{ post.0.create_time }} </time></a></span>
-                    <span class="post-author"><a href="#"> {{ post.0.author }} </a></span>
-                    <span class="comments-link"><a href="{% url 'comments:get_comments' post.0.pk %}"> Comments: {{ post.1 }}</a></span>
-                    <span class="views-count"><a href="{{ post.get_absolute_url }}"> Views: {{ post.0.views }}</a></span>
+                                                              datetime="{{ post.create_time }}"> {{ post.create_time }} </time></a></span>
+                    <span class="post-author"><a href="#"> {{ post.author }} </a></span>
+                    <span class="comments-link"><a href="#"> Comments: {{ post.views }}</a></span>
+                    <span class="views-count"><a href="{{ post.get_absolute_url }}"> Views: {{ post.views }}</a></span>
+                </div>
+                <div class="entry-content">
+                    {{ post.excerpt }}
                 </div>
             </header>
             <div class="entry-content clearfix">
@@ -27,25 +30,39 @@
         <div class="no-post"> No articles right now! </div>
     {% endfor %}
 
-            <!-- 简单分页效果
-            <div class="pagination-simple">
-                <a href="#">上一页</a>
-                <span class="current">第 6 页 / 共 11 页</span>
-                <a href="#">下一页</a>
-            </div>
-            -->
-            <div class="pagination">
-                <ul>
-                    <li><a href="">1</a></li>
-                    <li><a href="">...</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li class="current"><a href="">6</a></li>
-                    <li><a href="">7</a></li>
-                    <li><a href="">8</a></li>
-                    <li><a href="">...</a></li>
-                    <li><a href="">11</a></li>
-                </ul>
-            </div>
-    </main>
+     {% if is_paginated %}
+        <div class = "pagination">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">First Page</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous <-</a>
+            {% endif %}
+            {% if first %}
+                <a href="?page=1">1</a>
+            {% endif %}
+            {% if left %}
+                {% if left_has_more %}
+                    <span> ... </span>
+                {% endif %}
+                {% for i in left %}
+                    <a href="?page={{ i }}">{{ i }}</a>
+                {% endfor %}
+            {% endif %}
+            <a href="?page={{ page_obj.number }}" style="color:red">{{ page_obj.number }}</a>
+            {% if right %}
+                {% for i in right %}
+                    <a href="?page={{ i }}"> {{ i }} </a>
+                {% endfor %}
+                {% if right_has_more %}
+                    <span> ... </span>
+                {% endif %}
+            {% endif %}
+            {% if last %}
+                <a href="?page={{ paginator.num_page }}">{{ paginator.num_pages }}</a>
+            {% endif %}
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">-> Next</a>
+                <a href="?page={{ paginator.num_page }}">Last Page</a>
+            {% endif %}
+        </div>
+    {% endif %}
 {% endblock main %}

@@ -100,7 +100,7 @@
                     <ul>
                         {% for date in date_list %}
                         <li>
-                            <a href="{% url 'blog:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月</a>
+                            <a href="{% url 'blog:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月<span>({{ date.num_posts }})</span></a>
                         </li>
                         {% empty %}
                         <li>
@@ -116,7 +116,7 @@
                     <ul>
                         {% for cate in cate_list %}
                         <li>
-                            <a href="{% url 'blog:categories' cate.pk %}">{{ cate.name }} <span class="post-count"> {{ cate_len }} </span></a>
+                            <a href="{% url 'blog:categories' cate.pk %}">{{ cate.name }} <span class="post-count"> ({{ cate.num_posts }}) </span></a>
                         </li>
                         {% empty %}
                         <li>
@@ -132,8 +132,8 @@
                     <ul>
                         {% for tag in tags %}
                         <li>
-                            <a href="#">{{ tag.name }}</a>
-                        </li>
+                             <a href="{% url 'blog:tags' tag.pk %}">{{ tag.name }} <span class="post-count"> ({{ tag.num_posts }}) </span></a>
+                       </li>
                         {% empty %}
                         <li>
                             <a href="#">No available tags!</a>

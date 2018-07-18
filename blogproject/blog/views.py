@@ -6,6 +6,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Post, Category, Tag
 from comments.forms import commentForm
 from comments.models import Comment
+from django.core.wsgi import get_wsgi_application
 # Create your views here.
 
 '''

@@ -12,7 +12,7 @@ class allRssFeed(Feed):
         return Post.objects.all()
 
     def item_title(self, item):
-        return '[%s] %s' % (item.category, item.title)
+        return '[' + str(item.category) + '] ' + str(item.title)
 
     def item_description(self, item):
         return item.body

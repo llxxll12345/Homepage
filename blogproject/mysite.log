@@ -1,0 +1,333 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Jul  7 09:30:15 2018] ***
+compiled with version: 4.8.4 on 07 July 2018 08:33:07
+os: Linux-3.13.0-153-generic #203-Ubuntu SMP Thu Jun 14 08:52:28 UTC 2018
+nodename: vultr.guest
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/mole/Homepage/blogproject
+detected binary path: /home/mole/Homepage/blogproject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/mole/Homepage/blogproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7773
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 45.76.62.5:8000 fd 4
+spawned uWSGI http 1 (pid: 26835)
+uwsgi socket 0 bound to TCP address 127.0.0.1:51437 (port auto-assigned) fd 3
+Python version: 3.4.3 (default, Nov 28 2017, 16:44:58)  [GCC 4.8.4]
+Python main interpreter initialized at 0xb7d100
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 83344 bytes (81 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xb7d100 pid: 26834 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 26834, cores: 2)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Jul  7 09:30:51 2018] ***
+compiled with version: 4.8.4 on 07 July 2018 08:33:07
+os: Linux-3.13.0-153-generic #203-Ubuntu SMP Thu Jun 14 08:52:28 UTC 2018
+nodename: vultr.guest
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/mole/Homepage/blogproject
+detected binary path: /home/mole/Homepage/blogproject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/mole/Homepage/blogproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7773
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (45.76.62.5:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Jul  7 09:31:09 2018] ***
+compiled with version: 4.8.4 on 07 July 2018 08:33:07
+os: Linux-3.13.0-153-generic #203-Ubuntu SMP Thu Jun 14 08:52:28 UTC 2018
+nodename: vultr.guest
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/mole/Homepage/blogproject
+detected binary path: /home/mole/Homepage/blogproject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/mole/Homepage/blogproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7773
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (45.76.62.5:8000).
+bind(): Address already in use [core/socket.c line 769]
+/home/mole/Homepage/blogproject/venv/lib/python3.4/site-packages/django/views/generic/list.py:88: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'blog.models.Post'> QuerySet.
+  allow_empty_first_page=allow_empty_first_page, **kwargs)
+[pid: 26834|app: 0|req: 1/1] 116.76.136.239 () {38 vars in 721 bytes} [Sat Jul  7 17:31:22 2018] GET / => generated 12134 bytes in 1383 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 2/2] 116.76.136.239 () {38 vars in 706 bytes} [Sat Jul  7 17:31:23 2018] GET /static/blog/css/pace.css => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 4/3] 116.76.136.239 () {38 vars in 710 bytes} [Sat Jul  7 17:31:23 2018] GET /static/blog/css/custom.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 4/4] 116.76.136.239 () {38 vars in 724 bytes} [Sat Jul  7 17:31:23 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 6/5] 116.76.136.239 () {38 vars in 732 bytes} [Sat Jul  7 17:31:23 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 6/6] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:31:23 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 7/7] 116.76.136.239 () {38 vars in 695 bytes} [Sat Jul  7 17:31:24 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 8/8] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:31:24 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 9/9] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:31:24 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 10/10] 116.76.136.239 () {38 vars in 705 bytes} [Sat Jul  7 17:31:24 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 11/11] 116.76.136.239 () {38 vars in 695 bytes} [Sat Jul  7 17:31:24 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 12/12] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:31:24 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 13/13] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:31:25 2018] GET /static/blog/js/script.js => generated 98 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 14/14] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:31:26 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 15/15] 116.76.136.239 () {38 vars in 701 bytes} [Sat Jul  7 17:31:26 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 16/16] 116.100.104.211 () {22 vars in 225 bytes} [Sat Jul  7 17:35:05 2018] HEAD / => generated 12134 bytes in 22 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 17/17] 116.76.136.239 () {38 vars in 721 bytes} [Sat Jul  7 17:36:04 2018] GET / => generated 12134 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 18/18] 116.76.136.239 () {38 vars in 724 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 20/19] 116.76.136.239 () {38 vars in 706 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/css/pace.css => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 21/20] 116.76.136.239 () {38 vars in 732 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 21/21] 116.76.136.239 () {38 vars in 710 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 22/22] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 23/23] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 24/24] 116.76.136.239 () {38 vars in 695 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 25/25] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 26/26] 116.76.136.239 () {38 vars in 705 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 27/27] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:36:04 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 28/28] 116.76.136.239 () {38 vars in 695 bytes} [Sat Jul  7 17:36:05 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 29/29] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:05 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 30/30] 116.76.136.239 () {38 vars in 701 bytes} [Sat Jul  7 17:36:05 2018] GET /favicon.ico => generated 85 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 31/31] 116.76.136.239 () {40 vars in 752 bytes} [Sat Jul  7 17:36:15 2018] GET / => generated 12134 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 32/32] 116.76.136.239 () {38 vars in 724 bytes} [Sat Jul  7 17:36:15 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 34/33] 116.76.136.239 () {38 vars in 732 bytes} [Sat Jul  7 17:36:15 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 35/34] 116.76.136.239 () {38 vars in 706 bytes} [Sat Jul  7 17:36:15 2018] GET /static/blog/css/pace.css => generated 98 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 36/35] 116.76.136.239 () {38 vars in 710 bytes} [Sat Jul  7 17:36:15 2018] GET /static/blog/css/custom.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 36/36] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:15 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 37/37] 116.76.136.239 () {38 vars in 705 bytes} [Sat Jul  7 17:36:15 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 38/38] 116.76.136.239 () {38 vars in 695 bytes} [Sat Jul  7 17:36:16 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 40/39] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:36:16 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 40/40] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:16 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 41/41] 116.76.136.239 () {40 vars in 752 bytes} [Sat Jul  7 17:36:18 2018] GET / => generated 12134 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 42/42] 116.76.136.239 () {38 vars in 706 bytes} [Sat Jul  7 17:36:18 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 44/43] 116.76.136.239 () {38 vars in 724 bytes} [Sat Jul  7 17:36:18 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 45/44] 116.76.136.239 () {38 vars in 710 bytes} [Sat Jul  7 17:36:18 2018] GET /static/blog/css/custom.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 46/45] 116.76.136.239 () {38 vars in 732 bytes} [Sat Jul  7 17:36:18 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 46/46] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:18 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 47/47] 116.76.136.239 () {38 vars in 705 bytes} [Sat Jul  7 17:36:18 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 48/48] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:19 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 50/49] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:36:19 2018] GET /static/blog/js/script.js => generated 98 bytes in 49 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 50/50] 116.76.136.239 () {38 vars in 695 bytes} [Sat Jul  7 17:36:19 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 54 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 51/51] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:19 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 52/52] 116.76.136.239 () {40 vars in 792 bytes} [Sat Jul  7 17:36:24 2018] GET /archives/2018/6/ => generated 12134 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 53/53] 116.76.136.239 () {38 vars in 740 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 54/54] 116.76.136.239 () {38 vars in 722 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 56/55] 116.76.136.239 () {38 vars in 727 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 57/56] 116.76.136.239 () {38 vars in 748 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 58/57] 116.76.136.239 () {38 vars in 726 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/css/custom.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 58/58] 116.76.136.239 () {38 vars in 721 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 60/60] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 60/60] 116.76.136.239 () {38 vars in 707 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 61/61] 116.76.136.239 () {38 vars in 727 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 62/62] 116.76.136.239 () {38 vars in 707 bytes} [Sat Jul  7 17:36:25 2018] GET /static/blog/js/script.js => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 63/63] 116.76.136.239 () {40 vars in 776 bytes} [Sat Jul  7 17:36:32 2018] GET / => generated 12134 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 64/64] 116.76.136.239 () {38 vars in 724 bytes} [Sat Jul  7 17:36:32 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 66/65] 116.76.136.239 () {38 vars in 706 bytes} [Sat Jul  7 17:36:32 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 67/66] 116.76.136.239 () {38 vars in 710 bytes} [Sat Jul  7 17:36:32 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 68/67] 116.76.136.239 () {38 vars in 732 bytes} [Sat Jul  7 17:36:32 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 69/68] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:32 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 69/69] 116.76.136.239 () {38 vars in 705 bytes} [Sat Jul  7 17:36:32 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 70/70] 116.76.136.239 () {38 vars in 695 bytes} [Sat Jul  7 17:36:33 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 71/71] 116.76.136.239 () {38 vars in 711 bytes} [Sat Jul  7 17:36:33 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 72/72] 116.76.136.239 () {38 vars in 691 bytes} [Sat Jul  7 17:36:33 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Dumping model to file cache /tmp/jieba.cache
+Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/mole/Homepage/blogproject/venv/lib/python3.4/site-packages/jieba/__init__.py", line 152, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpvbjdfmr_' -> '/tmp/jieba.cache'
+Loading model cost 1.477 seconds.
+Prefix dict has been built succesfully.
+[pid: 26834|app: 0|req: 73/73] 116.76.136.239 () {40 vars in 774 bytes} [Sat Jul  7 17:36:38 2018] GET /post/1/ => generated 18811 bytes in 1634 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 74/74] 116.76.136.239 () {38 vars in 731 bytes} [Sat Jul  7 17:36:40 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 76/75] 116.76.136.239 () {38 vars in 739 bytes} [Sat Jul  7 17:36:40 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 77/76] 116.76.136.239 () {38 vars in 717 bytes} [Sat Jul  7 17:36:40 2018] GET /static/blog/css/custom.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 77/77] 116.76.136.239 () {38 vars in 713 bytes} [Sat Jul  7 17:36:40 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 78/78] 116.76.136.239 () {38 vars in 718 bytes} [Sat Jul  7 17:36:40 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 79/79] 116.76.136.239 () {38 vars in 712 bytes} [Sat Jul  7 17:36:41 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 80/80] 116.76.136.239 () {38 vars in 702 bytes} [Sat Jul  7 17:36:41 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 81/81] 116.76.136.239 () {38 vars in 718 bytes} [Sat Jul  7 17:36:41 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 82/82] 116.76.136.239 () {38 vars in 698 bytes} [Sat Jul  7 17:36:41 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 83/83] 116.76.136.239 () {38 vars in 628 bytes} [Sat Jul  7 17:38:26 2018] GET / => generated 12242 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 84/84] 116.76.136.239 () {38 vars in 653 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 86/85] 116.76.136.239 () {38 vars in 661 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 87/86] 116.76.136.239 () {38 vars in 635 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/css/pace.css => generated 98 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 87/87] 116.76.136.239 () {38 vars in 639 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 88/88] 116.76.136.239 () {38 vars in 640 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 89/89] 116.76.136.239 () {38 vars in 634 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 91/90] 116.76.136.239 () {38 vars in 640 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 91/91] 116.76.136.239 () {38 vars in 624 bytes} [Sat Jul  7 17:38:27 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 92/92] 116.76.136.239 () {38 vars in 620 bytes} [Sat Jul  7 17:38:28 2018] GET /static/blog/js/script.js => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 93/93] 82.85.180.68 () {22 vars in 222 bytes} [Sat Jul  7 19:25:09 2018] HEAD / => generated 12242 bytes in 24 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 94/94] 116.76.136.239 () {38 vars in 628 bytes} [Sat Jul  7 20:02:53 2018] GET / => generated 12242 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 96/95] 116.76.136.239 () {38 vars in 653 bytes} [Sat Jul  7 20:02:54 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 96/96] 116.76.136.239 () {38 vars in 639 bytes} [Sat Jul  7 20:02:54 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 98/97] 116.76.136.239 () {38 vars in 624 bytes} [Sat Jul  7 20:02:54 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 98/98] 116.76.136.239 () {38 vars in 640 bytes} [Sat Jul  7 20:02:54 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 99/99] 116.76.136.239 () {38 vars in 635 bytes} [Sat Jul  7 20:02:55 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 100/100] 116.76.136.239 () {38 vars in 661 bytes} [Sat Jul  7 20:02:55 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 101/101] 116.76.136.239 () {38 vars in 634 bytes} [Sat Jul  7 20:02:55 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 102/102] 116.76.136.239 () {38 vars in 640 bytes} [Sat Jul  7 20:02:55 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 103/103] 116.76.136.239 () {38 vars in 620 bytes} [Sat Jul  7 20:02:56 2018] GET /static/blog/js/script.js => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 104/104] 116.76.136.239 () {40 vars in 667 bytes} [Sat Jul  7 20:03:24 2018] GET / => generated 12242 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 105/105] 116.76.136.239 () {38 vars in 635 bytes} [Sat Jul  7 20:03:25 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 106/106] 116.76.136.239 () {38 vars in 639 bytes} [Sat Jul  7 20:03:25 2018] GET /static/blog/css/custom.css => generated 100 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 107/107] 116.76.136.239 () {38 vars in 661 bytes} [Sat Jul  7 20:03:25 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 109/109] 116.76.136.239 () {38 vars in 624 bytes} [Sat Jul  7 20:03:25 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 109/109] 116.76.136.239 () {38 vars in 634 bytes} [Sat Jul  7 20:03:25 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 110/110] 116.76.136.239 () {38 vars in 640 bytes} [Sat Jul  7 20:03:25 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 111/111] 116.76.136.239 () {38 vars in 653 bytes} [Sat Jul  7 20:03:26 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 113/112] 116.76.136.239 () {38 vars in 620 bytes} [Sat Jul  7 20:03:26 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 113/113] 116.76.136.239 () {38 vars in 640 bytes} [Sat Jul  7 20:03:26 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 114/114] 116.76.136.239 () {40 vars in 681 bytes} [Sat Jul  7 20:03:30 2018] GET /post/1/ => generated 18811 bytes in 122 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 115/115] 116.76.136.239 () {40 vars in 735 bytes} [Sat Jul  7 20:03:31 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 116/116] 116.76.136.239 () {40 vars in 749 bytes} [Sat Jul  7 20:03:31 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 117/117] 116.76.136.239 () {40 vars in 731 bytes} [Sat Jul  7 20:03:31 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 118/118] 116.76.136.239 () {40 vars in 736 bytes} [Sat Jul  7 20:03:31 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 120/119] 116.76.136.239 () {40 vars in 720 bytes} [Sat Jul  7 20:03:31 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 120/120] 116.76.136.239 () {40 vars in 736 bytes} [Sat Jul  7 20:03:31 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 121/121] 116.76.136.239 () {40 vars in 716 bytes} [Sat Jul  7 20:03:32 2018] GET /static/blog/js/script.js => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 122/122] 116.76.136.239 () {40 vars in 730 bytes} [Sat Jul  7 20:03:32 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 123/123] 116.76.136.239 () {40 vars in 757 bytes} [Sat Jul  7 20:03:32 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 125/124] 116.76.136.239 () {38 vars in 717 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/css/custom.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 126/125] 116.76.136.239 () {38 vars in 713 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/css/pace.css => generated 98 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 127/127] 116.76.136.239 () {38 vars in 731 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 128/127] 116.76.136.239 () {38 vars in 739 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 129/128] 116.76.136.239 () {38 vars in 712 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 129/129] 116.76.136.239 () {38 vars in 718 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 130/130] 116.76.136.239 () {38 vars in 698 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 132/131] 116.76.136.239 () {38 vars in 718 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 132/132] 116.76.136.239 () {38 vars in 702 bytes} [Sat Jul  7 20:08:29 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 133/133] 116.76.136.239 () {38 vars in 712 bytes} [Sat Jul  7 20:08:30 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 134/134] 116.76.136.239 () {38 vars in 702 bytes} [Sat Jul  7 20:08:30 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 135/135] 116.76.136.239 () {38 vars in 718 bytes} [Sat Jul  7 20:08:31 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 136/136] 116.76.136.239 () {38 vars in 698 bytes} [Sat Jul  7 20:08:31 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 137/137] 116.76.136.239 () {38 vars in 708 bytes} [Sat Jul  7 20:08:32 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 138/138] 183.103.127.5 () {22 vars in 223 bytes} [Sat Jul  7 20:14:02 2018] HEAD / => generated 12242 bytes in 19 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 139/139] 185.38.77.108 () {22 vars in 222 bytes} [Sat Jul  7 21:35:32 2018] GET / => generated 12242 bytes in 23 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 140/140] 121.132.205.99 () {22 vars in 224 bytes} [Sat Jul  7 22:05:24 2018] HEAD / => generated 12242 bytes in 24 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 141/141] 62.15.53.186 () {22 vars in 222 bytes} [Sat Jul  7 22:08:17 2018] HEAD / => generated 12242 bytes in 16 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 142/142] 186.50.21.97 () {22 vars in 222 bytes} [Sun Jul  8 01:06:43 2018] HEAD / => generated 12242 bytes in 23 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 143/143] 200.115.131.246 () {22 vars in 224 bytes} [Sun Jul  8 03:50:46 2018] GET / => generated 12242 bytes in 22 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 144/144] 84.52.67.126 () {22 vars in 222 bytes} [Sun Jul  8 04:03:10 2018] HEAD / => generated 12242 bytes in 22 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 145/145] 95.68.105.27 () {22 vars in 221 bytes} [Sun Jul  8 04:14:53 2018] GET / => generated 12242 bytes in 21 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 146/146] 187.202.190.205 () {22 vars in 224 bytes} [Sun Jul  8 05:22:48 2018] GET / => generated 12242 bytes in 20 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 147/147] 86.109.221.2 () {22 vars in 222 bytes} [Sun Jul  8 08:09:39 2018] HEAD / => generated 12242 bytes in 20 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 148/148] 46.27.254.188 () {22 vars in 223 bytes} [Sun Jul  8 10:30:44 2018] HEAD / => generated 12242 bytes in 26 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 149/149] 122.116.21.7 () {22 vars in 221 bytes} [Sun Jul  8 11:24:22 2018] GET / => generated 12242 bytes in 47 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 150/150] 113.104.242.20 () {36 vars in 636 bytes} [Sun Jul  8 16:14:17 2018] GET / => generated 12242 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 151/151] 113.104.242.20 () {36 vars in 643 bytes} [Sun Jul  8 16:14:17 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 152/152] 113.104.242.20 () {36 vars in 625 bytes} [Sun Jul  8 16:14:17 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 153/153] 113.104.242.20 () {36 vars in 629 bytes} [Sun Jul  8 16:14:17 2018] GET /static/blog/css/custom.css => generated 100 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 154/154] 113.104.242.20 () {36 vars in 630 bytes} [Sun Jul  8 16:14:17 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 155/155] 113.104.242.20 () {36 vars in 624 bytes} [Sun Jul  8 16:14:18 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 156/156] 113.104.242.20 () {36 vars in 614 bytes} [Sun Jul  8 16:14:18 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 157/157] 113.104.242.20 () {36 vars in 651 bytes} [Sun Jul  8 16:14:20 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 158/158] 113.104.242.20 () {36 vars in 630 bytes} [Sun Jul  8 16:14:20 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 159/159] 113.104.242.20 () {36 vars in 610 bytes} [Sun Jul  8 16:14:21 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 160/160] 113.104.242.20 () {36 vars in 624 bytes} [Sun Jul  8 16:14:22 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 161/161] 113.104.242.20 () {36 vars in 614 bytes} [Sun Jul  8 16:14:22 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 162/162] 113.104.242.20 () {36 vars in 630 bytes} [Sun Jul  8 16:14:23 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 163/163] 113.104.242.20 () {36 vars in 607 bytes} [Sun Jul  8 16:14:24 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 164/164] 113.104.242.20 () {36 vars in 618 bytes} [Sun Jul  8 16:14:26 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 165/165] 82.79.110.184 () {22 vars in 222 bytes} [Sun Jul  8 18:53:27 2018] GET / => generated 12242 bytes in 58 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 166/166] 185.76.109.28 () {22 vars in 223 bytes} [Sun Jul  8 20:04:44 2018] HEAD / => generated 12242 bytes in 22 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 167/167] 178.205.83.62 () {22 vars in 223 bytes} [Sun Jul  8 21:51:13 2018] HEAD / => generated 12242 bytes in 21 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 168/168] 121.132.205.99 () {22 vars in 224 bytes} [Mon Jul  9 03:29:37 2018] HEAD / => generated 12242 bytes in 21 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 169/169] 185.198.108.247 () {22 vars in 223 bytes} [Mon Jul  9 04:41:55 2018] HEAD / => generated 12242 bytes in 21 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 170/170] 94.78.69.165 () {22 vars in 222 bytes} [Mon Jul  9 06:06:19 2018] HEAD / => generated 12242 bytes in 21 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 171/171] 14.226.245.127 () {22 vars in 224 bytes} [Mon Jul  9 08:26:59 2018] HEAD / => generated 12242 bytes in 20 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 172/172] 62.105.135.217 () {22 vars in 224 bytes} [Mon Jul  9 10:29:26 2018] HEAD / => generated 12242 bytes in 20 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 173/173] 177.131.113.242 () {22 vars in 225 bytes} [Mon Jul  9 13:13:37 2018] HEAD / => generated 12242 bytes in 20 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+[pid: 26834|app: 0|req: 174/174] 196.20.238.12 () {22 vars in 223 bytes} [Mon Jul  9 13:16:54 2018] HEAD / => generated 12242 bytes in 16 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 26834|app: 0|req: 175/175] 188.27.17.81 () {22 vars in 222 bytes} [Mon Jul  9 16:36:32 2018] HEAD / => generated 12242 bytes in 21 msecs (HTTP/1.0 200) 3 headers in 111 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Jul  9 10:10:02 2018] ***
+compiled with version: 4.8.4 on 07 July 2018 08:33:07
+os: Linux-3.13.0-153-generic #203-Ubuntu SMP Thu Jun 14 08:52:28 UTC 2018
+nodename: vultr.guest
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/mole/Homepage/blogproject
+detected binary path: /home/mole/Homepage/blogproject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/mole/Homepage/blogproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7773
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 45.76.62.5:8000 fd 4
+spawned uWSGI http 1 (pid: 14674)
+uwsgi socket 0 bound to TCP address 127.0.0.1:57542 (port auto-assigned) fd 3
+Python version: 3.4.3 (default, Nov 28 2017, 16:44:58)  [GCC 4.8.4]
+Python main interpreter initialized at 0xc8c170
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 83344 bytes (81 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xc8c170 pid: 14673 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 14673, cores: 2)
+/home/mole/Homepage/blogproject/venv/lib/python3.4/site-packages/django/views/generic/list.py:88: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'blog.models.Post'> QuerySet.
+  allow_empty_first_page=allow_empty_first_page, **kwargs)
+[pid: 14673|app: 0|req: 1/1] 113.104.242.20 () {36 vars in 636 bytes} [Mon Jul  9 18:10:14 2018] GET / => generated 12242 bytes in 1377 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 2/2] 113.104.242.20 () {36 vars in 643 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 3/3] 113.104.242.20 () {36 vars in 629 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 5/4] 113.104.242.20 () {36 vars in 651 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 6/5] 113.104.242.20 () {36 vars in 625 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/css/pace.css => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 6/6] 113.104.242.20 () {36 vars in 630 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 7/7] 113.104.242.20 () {36 vars in 624 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 8/8] 113.104.242.20 () {36 vars in 614 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 9/9] 113.104.242.20 () {36 vars in 630 bytes} [Mon Jul  9 18:10:16 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 10/10] 113.104.242.20 () {36 vars in 610 bytes} [Mon Jul  9 18:10:17 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 11/11] 113.104.242.20 () {36 vars in 625 bytes} [Mon Jul  9 18:10:17 2018] GET /static/blog/css/pace.css => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 12/12] 113.104.242.20 () {36 vars in 643 bytes} [Mon Jul  9 18:10:17 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 13/13] 113.104.242.20 () {36 vars in 629 bytes} [Mon Jul  9 18:10:17 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 14/14] 113.104.242.20 () {38 vars in 667 bytes} [Mon Jul  9 18:10:24 2018] GET / => generated 12242 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 15/15] 113.104.242.20 () {36 vars in 629 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/css/custom.css => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 16/16] 113.104.242.20 () {36 vars in 651 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/css/highlights/github.css => generated 111 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 18/17] 113.104.242.20 () {36 vars in 625 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/css/pace.css => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 19/18] 113.104.242.20 () {36 vars in 643 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/css/bootstrap.min.css => generated 107 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 19/19] 113.104.242.20 () {36 vars in 630 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/js/jquery-2.1.3.min.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 20/20] 113.104.242.20 () {36 vars in 624 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/js/bootstrap.min.js => generated 105 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 21/21] 113.104.242.20 () {36 vars in 614 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 22/22] 113.104.242.20 () {36 vars in 630 bytes} [Mon Jul  9 18:10:25 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 23/23] 113.104.242.20 () {36 vars in 610 bytes} [Mon Jul  9 18:10:27 2018] GET /static/blog/js/script.js => generated 98 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 24/24] 113.104.242.20 () {36 vars in 614 bytes} [Mon Jul  9 18:10:29 2018] GET /static/blog/js/pace.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 1)
+[pid: 14673|app: 0|req: 25/25] 113.104.242.20 () {36 vars in 630 bytes} [Mon Jul  9 18:10:30 2018] GET /static/blog/js/modernizr.custom.js => generated 108 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 14673|app: 0|req: 26/26] 113.104.242.20 () {36 vars in 610 bytes} [Mon Jul  9 18:10:31 2018] GET /static/blog/js/script.js => generated 98 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Jul  9 10:13:29 2018] ***
+compiled with version: 4.8.4 on 07 July 2018 08:33:07
+os: Linux-3.13.0-153-generic #203-Ubuntu SMP Thu Jun 14 08:52:28 UTC 2018
+nodename: vultr.guest
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/mole/Homepage/blogproject
+detected binary path: /home/mole/Homepage/blogproject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/mole/Homepage/blogproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7773
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+building mime-types dictionary from file /etc/mime.types...536 entry found
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (45.76.62.5:8000).
+bind(): Address already in use [core/socket.c line 769]

@@ -18,7 +18,7 @@
     </article>
     <section class="comment-area" id="comment-area">
         <hr>
-        <h3>发表评论</h3>
+        <h3> Comments </h3>
         <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
             {% csrf_token %}
             <div class ="row">
@@ -41,19 +41,19 @@
                     <label for="{{ form.text.id_for_label }}">Text</label>
                     {{ form.text }}
                     {{ form.text.errors }}
-                    <textarea name="text" cols="20" rows="5" id="comment_text">
-
                     </textarea>
                     <span>
-                        <p style="color:red;">
-                            Character count:<span id = "chcount" >0</span>
 
-                            Word count:<span id = "wdcount">0</span>
-                        <ul>At most 1000 characters</ul>
-                        </p>
-
+                            <div class = "col-md-4">
+                                 Character count:<span style="color:red" id = "chcount" >0</span>/1000
+                            </div>
+                            <div class = "col-md-4">
+                                 Word count:<span style="color:red" id = "wdcount">0</span>/140
+                            </div>
                     </span>
-                    <button type="submit" class = "comment-btn"> Submit </button>
+                    <br>
+                        <button type="submit" class = "comment-btn"> Submit </button>
+                    </br>
                 </div>
             </div>
         </form>
@@ -75,54 +75,61 @@
     </section>
 {% endblock main %}
 {% block toc %}
+    <div class="widget widget-content">
+        <h3 class="widget-title"> Index </h3>
+        {{ post.toc|safe }}
+    </div>
 
-
-<script>
+    <script>
 $(document).ready(function(){
 	var i = 0;
-    $("#comment_text").keyup( function() {
+	var wordCnt = 0;
+    $("textarea").keyup( function() {
+        var content = $(this).val();
+        if ((content[content.length-1] == ' ' || content[content.length-1] == '\n') && wordCnt >= 140)
+            $(this).text(content);
+        wordCnt = 0;
+    });
+    $("textarea").keydown( function() {
+
         console.log("clicked");
         $(this).css("background-color:red;");
         $("#chcount").text($(this).val().length);
-
         var input = $(this).val();
-        console.log(input);
+
         var words = new Array();
+        wordCnt = 0;
         var tempWord = "";
-        var wordCnt = 0;
+
+        if (input.length == 0) {
+            $("#wdcount").text(wordCnt);
+            return;
+        }
+
         for (i = 0;i < input.length; i++) {
-            if (input[i] != ' ' && input[i+1] == ' ') {
+            if ((input[i] != ' ' && input[i+1] == ' ') || (input[i] != '\n' && input[i+1] == '\n')) {
                 wordCnt++;
             }
         }
-        $("#wdcount").text(wordCnt);
+        if (input[input.length-1] != ' ' && input[input.length-1] != '\n') {
+            console.log("unfinished word");
+            wordCnt++;
+        }
         console.log(wordCnt);
+        $("#wdcount").text(wordCnt);
 
     });
 	function resetBg(eleName) {
 		$(eleName).css("background-color","white");
 	}
 	// click event
-  	$("#test1").click(function(){
-    	$(this).hide(1000);
-  	});
-  	$("p.test").click(function() {
-  		$(this).css("color","red");
-  	});
-  	$("input").click(function() {
-  		$("p.test").toggle(200, function() {
-  			$(this).css("color","black");
-  		});
-  	});
 
   	//double click
-  	$("p").dblclick(function() {
-  		//alert("double click.");
-  	})
+
 
   	//mouseenter
   	$("p").mouseenter(function() {
-  		$(this).css("background-color","green");
+  		$(this).css("background-color","grey");
   	})
   	$("p").mouseleave(function() {
   		resetBg("p");
@@ -146,54 +153,31 @@ $(document).ready(function(){
   	$("input").blur(function(){
     	$("#submit").show();
   	});
-
-  	// fade
-  	function fadein() {
-  		$("#div1").fadeIn();
-	    $("#div2").fadeIn("slow");
-	    $("#div3").fadeIn(3000);
-  	}
-
-  	function fadeout() {
-  		$("#div1").fadeOut();
-	    $("#div2").fadeOut("slow");
-	    $("#div3").fadeOut(3000);
-  	}
-
-  	function fadeto() {
-  		$("#div1").fadeTo("slow",0.2);
-	    $("#div2").fadeTo("slow", 0.5);
-	    $("#div3").fadeTo("slow", 0.7);
-  	}
-
-  	$(".btnCg").click(function(){
-	    //if (i & 1 == 1) fadein();
-	    //else fadeout();
-	    $("#div1").fadeToggle();
-		$("#div2").fadeToggle("slow");
-		$("#div3").fadeToggle(1000);
-		fadeto();
-  	});
 });
 </script>
-Input your name: <input type="text">
-<p> Number of Characters entered:
-	<span> 0 </span>
-</p>
-<form action = "">
-First Name:
-<input type = "test" name = "First" value = "Lixing"><br>
-Last Name:
-<input type = "text" name = "Last"  value = "Liu"><br>
-<span id = "submit"> Submit here</span>
-<input type = "submit" id = "btnSub" value = "Submit">
-</form>
-<p id = "test1"> id test1</p>
-<p class = "test"> class test p </p>
-<br>
-<button class = "btnCg">change</button>
-<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
-<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
-<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+    <div class="widget widget-login">
+        <h4>Login as a User</h4>
+        <form action = "" method="post">
+            <div class="row">
+                <div class="col-md-8">
+                    User Name:
+                        <input type = "test" name = "Username" value = "user"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                   Password :
+                        <input type = "password" name = "Password"  value = ".."><br>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-md-8">
+                    <button type = "submit" class = "comment-btn" id = "btnSub"> Login </button>
+                    <span id = "submit"> <=Login</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
 {% endblock toc%}
 

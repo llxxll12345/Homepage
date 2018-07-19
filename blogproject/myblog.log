@@ -1,0 +1,38 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Jul  9 09:11:21 2018] ***
+compiled with version: 4.8.4 on 07 July 2018 08:33:07
+os: Linux-3.13.0-153-generic #203-Ubuntu SMP Thu Jun 14 08:52:28 UTC 2018
+nodename: vultr.guest
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/mole/Homepage/blogproject
+detected binary path: /home/mole/Homepage/blogproject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/mole/Homepage/blogproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7773
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (45.76.62.5:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Jul  9 09:11:39 2018] ***
+compiled with version: 4.8.4 on 07 July 2018 08:33:07
+os: Linux-3.13.0-153-generic #203-Ubuntu SMP Thu Jun 14 08:52:28 UTC 2018
+nodename: vultr.guest
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/mole/Homepage/blogproject
+detected binary path: /home/mole/Homepage/blogproject/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/mole/Homepage/blogproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7773
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (45.76.62.5:8000).
+bind(): Address already in use [core/socket.c line 769]

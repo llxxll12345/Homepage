@@ -1,6 +1,9 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 {% block main %}
+     {% if error_msg %}
+            <p>{{ error_msg }}</p>
+     {% endif %}
      {% for post in post_list %}
         <article class="post post-1">
             <header class="entry-header">
@@ -15,14 +18,11 @@
                     <span class="comments-link"><a href="#"> Comments: {{ post.views }}</a></span>
                     <span class="views-count"><a href="{{ post.get_absolute_url }}"> Views: {{ post.views }}</a></span>
                 </div>
-                <div class="entry-content">
-                    {{ post.excerpt }}
-                </div>
             </header>
             <div class="entry-content clearfix">
-                <p> {{ post.excerpt }} </p>
+                <p> {{ post.exerpt }} </p>
                 <div class="read-more cl-effect-14">
-                    <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
+                    <a href="{{ post.get_absolute_url }}" class="more-link">Read more <span class="meta-nav">=></span></a>
                 </div>
             </div>
         </article>
@@ -31,7 +31,8 @@
     {% endfor %}
 
      {% if is_paginated %}
-        <div class = "pagination">
+        <div class = "pagination" style="background-color:white">
+            <h4>
             {% if page_obj.has_previous %}
                 <a href="?page=1">First Page</a>
                 <a href="?page={{ page_obj.previous_page_number }}">Previous <-</a>
@@ -63,6 +64,7 @@
                 <a href="?page={{ page_obj.next_page_number }}">-> Next</a>
                 <a href="?page={{ paginator.num_page }}">Last Page</a>
             {% endif %}
+            </h4>
         </div>
     {% endif %}
 {% endblock main %}

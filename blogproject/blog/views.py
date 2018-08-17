@@ -6,7 +6,7 @@ from django.utils.text import slugify
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Post, Category, Tag
-from comments.forms import commentForm
+from comments.forms import commentForm, contactForm
 from comments.models import Comment
 from django.db.models import Q
 # Create your views here.
@@ -52,7 +52,7 @@ class IndexView(ListView):
     model = Post
     template_name = 'blog/index.html'
     context_object_name = 'post_list'
-    paginate_by = 1
+    paginate_by = 5
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -61,12 +61,14 @@ class IndexView(ListView):
         paginator = context.get('paginator')
         page = context.get('page_obj')
         is_paginated = context.get('is_paginated')
+        post_list = context.get('post_list')
 
         #create paginiation data pack
         pagination_data = self.pagination_data(paginator, page, is_paginated)
 
         #update context
         context.update(pagination_data)
+        context.update({'post_list': zip(post_list, make_len(post_list))})
         return context
 
     def pagination_data(self, paginator, page, is_paginated):
@@ -138,12 +140,11 @@ class CategoryView(ListView):
         cate = get_object_or_404(Category, pk=self.kwargs.get('pk'))
         return super(CategoryView, self).get_queryset().filter(category = cate)
 
-def make_zip(request, post_list, length=0, lenName=""):
+def make_len(post_list):
     len_list = []
     for post in post_list:
         len_list.append(len(Comment.objects.all().filter(post = post)))
-    return render(request, 'blog/index.html', context={'post_list': zip(post_list, len_list), lenName: str(length)})
-
+    return len_list
 def _index(request):
     return render(request, 'blog/index.html', context={'title':'My homepage', 'welcome': 'Hello!'})
 
@@ -194,7 +195,9 @@ def about(request):
     return render(request, 'blog/about.html', context={'post': post})
 
 def contact(request):
-    return render(request, 'blog/contact.html')
+    form = contactForm(request.POST)
+    has_err = False
+    return render(request, 'blog/contact.html', context={'form': form, 'has_err': has_err})
 
 def search(request):
     q = request.GET.get('q')

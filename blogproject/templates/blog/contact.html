@@ -6,16 +6,47 @@
 					<h1>Contact</h1>
 					<article class="post">
 						<div class="entry-content clearfix">
-							<form action="#" method="post" class="contact-form">
-								<div class="row">
-									<div class="col-md-6 col-md-offset-0">
-										<input type="text" name="name" placeholder="Name" required>
-										<input type="email" name="email" placeholder="Email" required>
-										<input type="text" name="subject" placeholder="Subject" required>
-										<textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-										<button class="btn-send btn-5 btn-5b ion-ios-paperplane"><span>Drop Me a Line</span></button>
+							<form action="{% url 'comments:post_contact_msg' %}" method="post" class="comment-form">
+								{% csrf_token %}
+								{% if has_err %}
+									<span>Error in your input!</span>
+								{% endif %}
+								<div class ="row">
+									<div class = "col-md-4">
+										<label for="{{ form.name.id_for_label }}">Name</label>
+										{{ form.name }}
+										{{ form.name.errors }}
 									</div>
-								</div>	<!-- row -->
+									<div class = "col-md-4">
+										<label for="{{ form.email.id_for_label }}">Email</label>
+										{{ form.email }}
+										{{ form.email.errors }}
+									</div>
+
+									<div class = "col-md-8">
+										<label for="{{ form.url.id_for_label }}">Subject</label>
+										{{ form.subject }}
+										{{ form.subject.errors }}
+									</div>
+									<div class = "col-md-8">
+										<label for="{{ form.text.id_for_label }}">Text</label>
+										{{ form.text }}
+										{{ form.text.errors }}
+										</textarea>
+										<span>
+
+												<div class = "col-md-4">
+													 Character count:<span style="color:red" id = "chcount" >0</span>/1000
+												</div>
+												<div class = "col-md-4">
+													 Word count:<span style="color:red" id = "wdcount">0</span>/140
+												</div>
+										</span>
+										<br>
+											<button type="submit" class = "comment-btn"> Submit </button>
+										</br>
+									</div>
+								</div>
 							</form>
 						</div>
 					</article>

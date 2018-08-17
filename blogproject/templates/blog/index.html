@@ -8,15 +8,15 @@
         <article class="post post-1">
             <header class="entry-header">
                <h1 class="entry-title">
-                   <a href="{{ post.get_absolute_url }}"> {{ post.title }} </a>
+                   <a href="{{ post.get_absolute_url }}"> {{ post.0.title }} </a>
                </h1>
                 <div class="entry-meta">
-                    <span class="post-category"><a href="#"> {{ post.category.name }} </a></span>
+                    <span class="post-category"><a href="#"> {{ post.0.category.name }} </a></span>
                     <span class="post-date"><a href="#"><time class="entry-date"
-                                                              datetime="{{ post.create_time }}"> {{ post.create_time }} </time></a></span>
-                    <span class="post-author"><a href="#"> {{ post.author }} </a></span>
-                    <span class="comments-link"><a href="#"> Comments: {{ post.views }}</a></span>
-                    <span class="views-count"><a href="{{ post.get_absolute_url }}"> Views: {{ post.views }}</a></span>
+                                                              datetime="{{ post.create_time }}"> {{ post.0.create_time }} </time></a></span>
+                    <span class="post-author"><a href="#"> {{ post.0.author }} </a></span>
+                    <span class="comments-link"><a href="#"> Comments: {{ post.1 }}</a></span>
+                    <span class="views-count"><a href="{{ post.get_absolute_url }}"> Views: {{ post.0.views }}</a></span>
                 </div>
             </header>
             <div class="entry-content clearfix">

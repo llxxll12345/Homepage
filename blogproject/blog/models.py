@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.html import strip_tags
 import markdown
+from comments.models import Comment
 # Create your models here.
 
 class Category(models.Model):
@@ -26,8 +27,9 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag, blank=True)
 
+
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    views = models.PositiveIntegerField(default=0)
+    views  = models.PositiveIntegerField(default=0)
 
     def inc_views(self):
         self.views += 1
@@ -46,4 +48,5 @@ class Post(models.Model):
                                       'markdown.extensions.toc'
                                   ])
             self.exerpt = strip_tags(md.convert(self.body))[:54]
+
         super(Post, self).save(*args, **kwargs)

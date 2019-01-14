@@ -22,5 +22,4 @@ urlpatterns = [
     url(r'', include('blog.urls')),
     url(r'', include('comments.urls')),
     url(r'^rss/$', allRssFeed(), name='rss'),
-    url(r'^search/', include('haystack.urls')),
 ]

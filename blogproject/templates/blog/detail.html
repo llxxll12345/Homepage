@@ -16,6 +16,19 @@
             <p> {{ post.body|safe }}</p>
         </div>
     </article>
+    <div class="widget widget-recent-posts">
+        <ul>
+            {% for p in recommended_post_list %}
+            <li>
+                <a href="{% url 'blog:detail' post.pk %}">{{ p.title }}</a>
+            </li>
+            {% empty %}
+            <li>
+                <a href="#"> No recommended articles! </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
     <section class="comment-area" id="comment-area">
         <hr>
         <h3> Comments </h3>
@@ -72,6 +85,7 @@
             {% endfor %}
         </ul>
     </section>
+
 {% endblock main %}
 {% block toc %}
     <div class="widget widget-content">
@@ -154,29 +168,6 @@ $(document).ready(function(){
   	});
 });
 </script>
-    <div class="widget widget-login">
-        <h4>Login as a User</h4>
-        <form action = "" method="post">
-            <div class="row">
-                <div class="col-md-8">
-                    User Name:
-                        <input type = "test" name = "Username" value = "user"><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                   Password :
-                        <input type = "password" name = "Password"  value = ".."><br>
-                </div>
-            </div>
-             <div class="row">
-                <div class="col-md-8">
-                    <button type = "submit" class = "comment-btn" id = "btnSub"> Login </button>
-                    <span id = "submit"> <=Login</span>
-                </div>
-            </div>
-        </form>
-    </div>
 
 {% endblock toc%}
 

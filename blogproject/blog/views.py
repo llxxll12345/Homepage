@@ -163,13 +163,19 @@ def detail(request, pk):
     form = commentForm(request.POST)
     comment_list= post.comment_set.all()
     cm_len = len(comment_list)
+    recommended_post_list = recommend_post_content(post.pk)
     context = {
         'post': post,
         'form': form,
         'comment_list': comment_list,
-        'cm_len': cm_len
+        'cm_len': cm_len,
+        'recommended_post_list': recommended_post_list
     }
     return render(request, 'blog/detail.html', context=context)
+
+def recommend_post_content(post_id):
+    return Post.objects.filter(pk=post_id)
+
 
 def archives(request, year, month):
     post_list = Post.objects.filter(create_time__year=year, create_time__month=month).order_by('-create_time')
@@ -208,3 +214,6 @@ def search(request):
 
     post_list = Post.objects.filter(Q(title__icontains=q) | Q(body__icontains=q))
     return render(request, 'blog/index.html', {'error_msg': error_msg, 'post_list': post_list})
+
+def indexed_search(request):
+    return search(request)

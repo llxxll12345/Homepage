@@ -30,39 +30,13 @@ def post_comment(request, post_pk):
             return render(request, 'blog/detail.html', context=context)
     return redirect(post)
 
-def send_email(name, email, subject, text):
-    print("EMAIL!")
-    mail_host = 'smtp.qq.com'
-    mail_user = '617415529@qq.com'
-    mail_pass = 'iaptmrjyuafnbcac'
-    sender = '617415529@qq.com'
-    receivers = ['llxcharlie@outlook.com']
-    print(name, email, subject, text)
-    content = 'Contact form received: \nname: ' + name + '\nemial: ' + email + '\nsubject:' + subject + '\ntext:' + text
-    message = MIMEText(content, 'plain', 'utf-8')
-    message['Subject'] = 'Contact form received: ' + subject
-    message['From'] = sender
-    message['To'] = receivers[0]
-
-    try:
-        smtpObj = smtplib.SMTP()
-        smtpObj.connect(mail_host, 587)
-        smtpObj.starttls()
-
-        smtpObj.login(mail_user, mail_pass)
-        smtpObj.sendmail(sender, receivers, message.as_string())
-        smtpObj.quit()
-        print('success')
-    except smtplib.SMTPException as e:
-        print('error', e)
-
 def post_contact_msg(request):
     if request.method == 'POST':
         form = contactForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
             comment.save()
-            send_email(comment.name, comment.email, comment.subject, comment.text)
+            #send_email(comment.name, comment.email, comment.subject, comment.text)
         else:
             context = {
                 'form': form, 'has_err': True

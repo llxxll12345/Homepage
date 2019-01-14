@@ -35,7 +35,7 @@
         }
 
         body {
-            background-image: url("{% static 'blog/img/navbar.jpg' %}");
+            background-color: white;
         }
     </style>
 </head>
@@ -74,16 +74,9 @@
                         </span>
                     </a>
                         <div id="search-form" class="search-form">
-                            <span> Simple Search</span>
+                            <span> Search</span>
                             <form role="search" method="get" id="searchform" action="{% url 'blog:search' %}">
                                 <input type="search" name="q" placeholder="Make a search" required>
-                                <button type="submit"><span class="ion-ios-search-strong"></span></button>
-                            </form>
-                        </div>
-                        <div id="search-form-adv" class="search-form">
-                            <span> Advanced Search</span>
-                            <form role="search" method="get" id="searchform" action="{% url 'haystack_search' %}">
-                                <input type="search" name="q" placeholder="Make an advanced search" required>
                                 <button type="submit"><span class="ion-ios-search-strong"></span></button>
                             </form>
                         </div>

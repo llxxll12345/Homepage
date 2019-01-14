@@ -47,6 +47,5 @@ class Post(models.Model):
                                       'markdown.extensions.codehilite',
                                       'markdown.extensions.toc'
                                   ])
-            self.exerpt = strip_tags(md.convert(self.body))[:54]
-
+            self.exerpt = strip_tags(md.convert(self.body))[:54] + '...'
         super(Post, self).save(*args, **kwargs)

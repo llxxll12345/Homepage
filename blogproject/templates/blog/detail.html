@@ -17,8 +17,9 @@
         </div>
     </article>
     <div class="widget widget-recent-posts">
+        <h3 class="widget-title">Recommended articles</h3>
         <ul>
-            {% for p in recommended_post_list %}
+            {% for post in recommended_post_list %}
             <li>
                 <a href="{% url 'blog:detail' post.pk %}">{{ p.title }}</a>
             </li>

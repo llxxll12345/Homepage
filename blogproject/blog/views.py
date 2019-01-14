@@ -58,10 +58,13 @@ class IndexView(ListView):
         context = super().get_context_data(**kwargs)
 
         # get objects and parameters from context
+
         paginator = context.get('paginator')
         page = context.get('page_obj')
         is_paginated = context.get('is_paginated')
         post_list = context.get('post_list')
+
+        print(post_list)
 
         #create paginiation data pack
         pagination_data = self.pagination_data(paginator, page, is_paginated)
@@ -132,19 +135,45 @@ class IndexView(ListView):
         }
         return data
 
-class CategoryView(ListView):
-    model = Post
-    template_name = 'blog/index.html'
-    context_object_name = 'post_list'
-    def get_queryset(self):
+
+class CategoryView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
         cate = get_object_or_404(Category, pk=self.kwargs.get('pk'))
-        return super(CategoryView, self).get_queryset().filter(category = cate)
+        cates = cate.post_set.all().order_by('-create_time')
+        context.update({'post_list': zip(cates, make_len(cates)),
+                        'category_data': cate.__str__()})
+        return context
+
+
+class ArchiveView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        month = self.kwargs.get('month')
+        year = self.kwargs.get('year')
+        post_list = Post.objects.filter(create_time__year=year,
+                                        create_time__month=month).order_by('-create_time')
+        context.update({'post_list': zip(post_list, make_len(post_list)),
+                        'Archive_data': str(month) + "-" + str(year)})
+        return context
+
+
+class TagView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        tag = get_object_or_404(Tag, pk=self.kwargs.get('pk'))
+        post_list = tag.post_set.all().order_by('-create_time')
+        context.update({'post_list': zip(post_list, make_len(post_list)),
+                        'Tag_data': tag.__str__()})
+        return context
+
 
 def make_len(post_list):
     len_list = []
     for post in post_list:
         len_list.append(len(Comment.objects.all().filter(post = post)))
     return len_list
+
 def _index(request):
     return render(request, 'blog/index.html', context={'title':'My homepage', 'welcome': 'Hello!'})
 
@@ -153,6 +182,7 @@ def index(request):
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 def detail(request, pk):
+    print("detail requested.")
     post = get_object_or_404(Post, pk=pk)
     post.body = markdown.markdown(post.body, extensions=['markdown.extensions.extra',
                                       'markdown.extensions.codehilite',
@@ -179,11 +209,7 @@ def recommend_post_content(post_id):
 
 def archives(request, year, month):
     post_list = Post.objects.filter(create_time__year=year, create_time__month=month).order_by('-create_time')
-    return render(request, 'blog/index.html', context={'post_list': post_list})
 
-def categories(request, pk):
-    cate = get_object_or_404(Category, pk = pk)
-    post_list = cate.post_set.all().order_by('-create_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 def tags(request, pk):

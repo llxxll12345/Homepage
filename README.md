@@ -1,5 +1,5 @@
 # This is my home page.
 
-Using Django 1.10.
+Using Django 2.15
 
 - Currently under construction(blog section).
